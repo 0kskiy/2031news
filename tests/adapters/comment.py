@@ -53,7 +53,7 @@ def CommentModelAdapter(CommentModel: type) -> CommentModelAdapterT:
                         "связывая модель `blog.models.Comment` "
                         "с моделью `blog.models.Post`"
                     ),
-                    "text": "задаёт текст комментария",
+                    "text": "задаёт Text комментария",
                     "created_at": "задаёт дату комментария",
                 }
 

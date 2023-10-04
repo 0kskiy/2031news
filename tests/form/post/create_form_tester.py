@@ -62,7 +62,7 @@ class CreatePostFormTester(PostFormTester):
             ) from e
         except TextareaMismatchException as e:
             raise AssertionError(
-                "Убедитесь, что в форме создания поста текст поста"
+                "Убедитесь, что в форме создания поста Text поста"
                 " отправляется в поле типа `textarea`."
             ) from e
 
@@ -120,7 +120,7 @@ class CreatePostFormTester(PostFormTester):
     @property
     def display_text_error_message(self) -> str:
         return (
-            "Убедитесь, что после создания поста текст отображается на"
+            "Убедитесь, что после создания поста Text отображается на"
             " отдельной странице поста."
         )
 

@@ -151,7 +151,7 @@ class EditUserFormTester(BaseFormTester):
     def display_text_error_message(self) -> str:
         return (
             "Убедитесь, что после редактировании профиля пользователя новый"
-            " текст отображается на странице профиля."
+            " Text отображается на странице профиля."
         )
 
     def validation_error_message(self, student_form_fields_str: str) -> str:

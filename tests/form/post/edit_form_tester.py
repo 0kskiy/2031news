@@ -88,7 +88,7 @@ class EditPostFormTester(PostFormTester):
             ) from e
         except TextareaMismatchException as e:
             raise AssertionError(
-                "Убедитесь, что в форме редактирования поста основной текст"
+                "Убедитесь, что в форме редактирования поста основной Text"
                 " передаётся в поле типа `textarea`."
             ) from e
 
@@ -171,7 +171,7 @@ class EditPostFormTester(PostFormTester):
     @property
     def display_text_error_message(self) -> str:
         return (
-            "Убедитесь, что после редактирования поста новый текст"
+            "Убедитесь, что после редактирования поста новый Text"
             " отображается на странице поста."
         )
 

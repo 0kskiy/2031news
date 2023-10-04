@@ -50,7 +50,7 @@ class CreateCommentFormTester(BaseFormTester):
         except TextareaTagMissingException as e:
             raise AssertionError(
                 "Убедитесь, что в форме для создания комментария есть поле"
-                " типа `textarea` для ввода текста."
+                " типа `textarea` для ввода Textа."
             ) from e
 
     def _validate(self):
@@ -68,7 +68,7 @@ class CreateCommentFormTester(BaseFormTester):
             ) from e
         except TextareaMismatchException as e:
             raise AssertionError(
-                "Убедитесь, что в форме создания комментария текст"
+                "Убедитесь, что в форме создания комментария Text"
                 " комментария передаётся через поле типа `textarea`."
             ) from e
 
@@ -126,7 +126,7 @@ class CreateCommentFormTester(BaseFormTester):
     @property
     def display_text_error_message(self) -> str:
         return (
-            "Убедитесь, что после создании комментария его текст отображается"
+            "Убедитесь, что после создании комментария его Text отображается"
             " на странице поста в списке комментариев."
         )
 

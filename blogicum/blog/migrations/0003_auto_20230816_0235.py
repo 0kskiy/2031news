@@ -46,7 +46,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='post',
             name='text',
-            field=models.TextField(verbose_name='Текст'),
+            field=models.TextField(verbose_name='Text'),
         ),
         migrations.AlterField(
             model_name='post',

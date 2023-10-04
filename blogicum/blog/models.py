@@ -33,7 +33,7 @@ class Post(PublishedCreated):
     )
     text = models.TextField(
         blank=False,
-        verbose_name="Текст",
+        verbose_name="Text",
     )
     pub_date = models.DateTimeField(
         blank=False,
@@ -128,7 +128,7 @@ class Location(PublishedCreated):
 class Comment(PublishedCreated):
     text = models.TextField(
         blank=False,
-        verbose_name="Текст",
+        verbose_name="Text",
     )
     author = models.ForeignKey(
         User,
