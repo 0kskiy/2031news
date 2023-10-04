@@ -2,9 +2,9 @@
 {% load django_bootstrap5 %}
 {% block title %}
   {% if '/edit_comment/' in request.path %}
-    Редактирование комментария
+    Edit comment
   {% else %}
-    Удаление комментария
+    Delete comment
   {% endif %}
 {% endblock %}
 {% block content %}
@@ -13,10 +13,9 @@
       <div class="card" style="width: 40rem;">
         <div class="card-header">
           {% if '/edit_comment/' in request.path %}
-            Редактирование комментария
+            Edit comment
           {% else %}
-            Удаление комментария
-          {% endif %}
+            Delete comment
         </div>
         <div class="card-body">
           <form method="post"

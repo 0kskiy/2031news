@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block title %}
-  {{ post.title }} | {% if post.location and post.location.is_published %}{{ post.location.name }}{% else %}Планета Земля{% endif %} |
+  {{ post.title }} | {% if post.location and post.location.is_published %}{{ post.location.name }}{% else %}Earth{% endif %} |
   {{ post.pub_date|date:"d E Y" }}
 {% endblock %}
 {% block content %}
@@ -16,23 +16,23 @@
         <h6 class="card-subtitle mb-2 text-muted">
           <small>
             {% if not post.is_published %}
-              <p class="text-danger">Пост снят с публикации админом</p>
+              <p class="text-danger">Post was deleted by administration</p>
             {% elif not post.category.is_published %}
-              <p class="text-danger">Выбранная категория снята с публикации админом</p>
+              <p class="text-danger">Category was deleted by administration</p>
             {% endif %}
-            {{ post.pub_date|date:"d E Y, H:i" }} | {% if post.location and post.location.is_published %}{{ post.location.name }}{% else %}Планета Земля{% endif %}<br>
-            От автора <a class="text-muted" href="{% url 'blog:profile' post.author %}">@{{ post.author.username }}</a> в
-            категории {% include "includes/category_link.html" %}
+            {{ post.pub_date|date:"d E Y, H:i" }} | {% if post.location and post.location.is_published %}{{ post.location.name }}{% else %}Earth{% endif %}<br>
+            From author <a class="text-muted" href="{% url 'blog:profile' post.author %}">@{{ post.author.username }}</a>in
+            category {% include "includes/category_link.html" %}
           </small>
         </h6>
         <p class="card-text">{{ post.text|linebreaksbr }}</p>
         {% if user == post.author %}
           <div class="mb-2">
             <a class="btn btn-sm text-muted" href="{% url 'blog:edit_post' post.id %}" role="button">
-              Отредактировать публикацию
+              Edit publication
             </a>
             <a class="btn btn-sm text-muted" href="{% url 'blog:delete_post' post.id %}" role="button">
-              Удалить публикацию
+              Delete publication
             </a>
           </div>
         {% endif %}

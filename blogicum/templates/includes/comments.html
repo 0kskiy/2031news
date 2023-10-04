@@ -1,6 +1,6 @@
 {% if user.is_authenticated %}
   {% load django_bootstrap5 %}
-  <h5 class="mb-4">Оставить комментарий</h5>
+  <h5 class="mb-4">Leave comment</h5>
   <form method="post" action="{% url 'blog:add_comment' post.id %}">
     {% csrf_token %}
     {% bootstrap_form form %}
@@ -22,10 +22,10 @@
     </div>
     {% if user == comment.author %}
       <a class="btn btn-sm text-muted" href="{% url 'blog:edit_comment' post.id comment.id %}" role="button">
-        Отредактировать комментарий
+        Edit comment
       </a>
       <a class="btn btn-sm text-muted" href="{% url 'blog:delete_comment' post.id comment.id %}" role="button">
-        Удалить комментарий
+        Delete comment
       </a>
     {% endif %}
   </div>

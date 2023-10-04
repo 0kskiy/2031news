@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 {% block title %}
-  Публикации в категории {{ category.title }}
+  Category: {{ category.title }}
 {% endblock %}
 {% block content %}
-  <h1 class="text-center">Публикации в категории - {{ category.title }}</h1>
+  <h1 class="text-center">New in Category - {{ category.title }}</h1>
   <p class="col-6 offset-3 mb-5 lead text-center">{{ category.description }}</p>
   {% for post in page_obj %}
     <article class="mb-5">  
