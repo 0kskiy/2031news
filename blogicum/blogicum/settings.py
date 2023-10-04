@@ -1,4 +1,5 @@
 from pathlib import Path
+import os
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -8,7 +9,7 @@ SECRET_KEY = (
 
 DEBUG = True
 
-ALLOWED_HOSTS = ["127.0.0.1"]
+ALLOWED_HOSTS = ["127.0.0.1", '144.76.48.55', '2031news.ru']
 
 CSRF_FAILURE_VIEW = "pages.views.csrf_failure"
 
@@ -104,6 +105,7 @@ USE_TZ = True
 
 
 STATIC_URL = "/static/"
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 STATICFILES_DIRS = [
     BASE_DIR / "static_dev",
@@ -116,6 +118,13 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 LOGIN_REDIRECT_URL = "blog:index"
 
 INTERNAL_IPS = [
+    "127.0.0.1",
+]
+
+MEDIA_ROOT = BASE_DIR / "media"
+
+EMAIL_FILE_PATH = BASE_DIR / "sent_emails"
+NAL_IPS = [
     "127.0.0.1",
 ]
 
